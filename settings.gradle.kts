@@ -13,3 +13,4 @@ plugins {
 
 rootProject.name = "ac2dc-transpiler"
 include("app")
+include("utils")
