@@ -21,6 +21,7 @@ repositories {
 
 dependencies {
     // This dependency is used by the application.
+    implementation(libs.jna)
     implementation(project(":utils"))
 }
 
