@@ -1,2 +1,2 @@
 # AC2DC
-RTL C transpiler to normal C
+RTL C (and not only) transpiler to LTR
