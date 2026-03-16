@@ -44,5 +44,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.gormad.AppKt"
+    mainClass = "org.gormad.ac2dc.AppKt"
 }

@@ -1,3 +1,4 @@
+package org.gormad.ac2dc.utils
 import com.sun.jna.Library
 import com.sun.jna.Pointer
 import com.sun.jna.Structure
