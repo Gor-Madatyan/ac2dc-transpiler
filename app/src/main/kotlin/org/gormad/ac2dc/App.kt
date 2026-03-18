@@ -1,7 +1,7 @@
 package org.gormad.ac2dc
 
 import org.gormad.ac2dc.utils.getTranspiller
-import java.nio.file.Files
+import org.gormad.ac2dc.utils.transpileToFile
 import java.nio.file.Path
 import kotlin.system.exitProcess
 
@@ -13,9 +13,5 @@ fun main(args: Array<String>) {
     }
     val transpiler = getTranspiller(args[0])
 
-
-    var lines = Files.readAllLines(Path.of(args[1]))
-    lines = lines.map { line -> transpiler.transpile(line.trim())}
-
-    Files.write(Path.of(args[2]), lines)
+    transpiler.transpileToFile(Path.of(args[1]), Path.of(args[2]))
 }
