@@ -4,7 +4,7 @@ import com.sun.jna.Pointer
 import com.sun.jna.Structure
 
 @Structure.FieldOrder("size", "tokens")
-sealed class LexerOutput: Structure() {
+internal sealed class LexerOutput: Structure() {
     class ByValue : LexerOutput(), Structure.ByValue
 
     @JvmField
@@ -17,8 +17,7 @@ sealed class LexerOutput: Structure() {
     }
 }
 
-interface Lexer: Library {
+internal interface Plugin: Library {
     fun lex(str: String): LexerOutput.ByValue
-
     fun freeOutput(out: LexerOutput.ByValue)
 }

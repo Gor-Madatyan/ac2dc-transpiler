@@ -1,6 +1,6 @@
 package org.gormad.ac2dc
 
-import org.gormad.ac2dc.utils.loadFromPath
+import org.gormad.ac2dc.utils.getTranspiller
 import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
@@ -9,12 +9,6 @@ fun main(args: Array<String>) {
         exitProcess(1)
     }
 
-    val lib = loadFromPath(args[0])
-    val otp = lib.lex(args[1])
-
-    for (c in otp.getTokensArray()) {
-        println(c)
-    }
-
-    lib.freeOutput(otp)
+    val transpiler = getTranspiller(args[0])
+    println(transpiler.transpile(args[1]))
 }
