@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 
 
     var lines = Files.readAllLines(Path.of(args[1]))
-    lines = lines.map { line -> transpiler.transpile(line.trim())+'\n'}
+    lines = lines.map { line -> transpiler.transpile(line.trim())}
 
     Files.write(Path.of(args[2]), lines)
 }
