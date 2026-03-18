@@ -16,5 +16,5 @@ fun main(args: Array<String>) {
         println(c)
     }
 
-    lib.free_output(otp)
+    lib.freeOutput(otp)
 }
